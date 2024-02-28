@@ -1,73 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Christopher Smith</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Project</a></li>
-          <li><a href="#contact">Contact</a></li>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Christopher Smith</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Christopher Smith</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <ul>
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Project</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </ul>
       </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Christopher Smith</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <ul> 
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Project</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          </ul> 
-        </div>
-      </div>
-    </nav>
-    <section id = "profile">
-      <div class = "section__pic-container">
-        <img src = "./Assets/profile_pic_C-s.png" alt = "Christopher Smith profile picture"/>
-      </div>
-      <div class = "section__text">
-        <p class = "section__text__p1"> Hello, my name is</p>
-        <h1 class = "title"> Christopher Smith</h1>
-        <p class = "section__text__p2"> Java Developer</p>
-        <div class = "btn-container">
-          <button class = "btn btn-color-2" 
-          onclick="window.open('./Assets/Resume_Christopher.Smith.pdf')"
-          >Download Resume
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./Assets/profile_pic_C-s.png" alt="Christopher Smith profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1"> Hello, my name is</p>
+      <h1 class="title"> Christopher Smith</h1>
+      <p class="section__text__p2"> Java Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./Assets/Resume_Christopher.Smith.pdf')">Download Resume
         </button>
-        <button class = "btn btn-color-1" 
-          onclick="location.href='./#contact'"
-          >Contacts Info
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">Contacts Info
         </button>
-        </div>
-        <div id = "socials-container">
-          <img src="./Assets/linkedin.png" 
-            alt="My Linkedin profile"
-            class="icon" 
-            onclick="window.open('https://www.linkedin.com/in/christopher-smith-9091802a0/', '_blank')"/>
-            <img src="./Assets/github.png" 
-            alt="My Github profile"
-            class="icon" 
-            onclick="window.open('https://github.com/chrisSmithCoding', '_blank')"/>
-        </div>
       </div>
-    </section>
-    <script src="script.js"></script>
-  </body>
+      <div id="socials-container">
+        <img src="./Assets/linkedin.png" alt="My Linkedin profile" class="icon"
+          onclick="window.open('https://www.linkedin.com/in/christopher-smith-9091802a0/', '_blank')" />
+        <img src="./Assets/github.png" alt="My Github profile" class="icon"
+          onclick="window.open('https://github.com/chrisSmithCoding', '_blank')" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text_p1"> Get to Know More</p>
+    <p class="title"> About Me</p>
+    <div>
+      <img src="./Assets/about-pic.png" alt="profile pic" class="about-pic"> </img>
+      <div class="details-containers">
+        <img src="./Assets/experience.png" alt="Experience icon" class="icon">
+        <h3>Experience</h3>
+        <p>3+ Years <br>Java Development<br></p>
+        <p>Languages: Java, JavaScript, HTML, CSS.</p>
+        <p>Operating Systems: Microsoft Windows, Linux.</p>
+        <p>Development Environment: Agile, Waterfall, Scrum.</p>
+        <p>Web Development: Front-end, Back-end.</p>
+        <p>Databases: MongoDB, Github.</p>
+        <p>Other Experience: Restful API, React, AWS, CI, CD.</p>
+      </div>
+      <div class="details-containers">
+        <img src="./Assets/education.png" alt="Education icon" class="icon">
+        <h3>Education</h3>
+        <p>Rising Junior <br>Salem State University, Salem, MA<br></p>
+        <p>Bachelor of Science in Software Engineering, Minor in Mathematics</p>
+        <p>Expected Graduation: May 2025</p>
+        <p>GPA: 3.6</p>
+        <p>Honor Roll all years.</p>
+        <p>Coding Club</p>
+        <p>Relevant Coursework:
+        <ul>
+          <li>Software Engineering II</li>
+          <li>Software Engineering I</li>
+          <li>Operating System Principles</li>
+          <li>Discrete Structures</li>
+          <li>Software Design/Programming I</li>
+          <li>Calculus II</li>
+          <li>Data Structures and Algorithms</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+    <img src="./Assets/arrow.png" alt="arrow icon" class="icon-arrow" onclick= "location.href= './experience'">
+  </section>
+  <script src="script.js"></script>
+</body>
+
 </html>
